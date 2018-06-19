@@ -10,10 +10,9 @@ dropout = 0.8
 X = tf.placeholder(tf.float32, [None, input_size], name="X")
 Y = tf.placeholder(tf.int64, [batch_size], name="Y")
 
-# initial_learning_rate = 0.01
+
 initial_learning_rate = 0.001
 final_learning_rate = 0.0001
-
 learning_rate = initial_learning_rate
 
 
@@ -109,7 +108,6 @@ def alex_net(X, weights, biases, dropout):
     conv5 = conv2d('conv5', norm4, weights['wc5'], biases['bc5'])
     pool5 = maxpool2d('pool5', conv5, k=2)
     norm5 = norm('norm5', pool5, l_size=4)
-
 
 
     fc1 = tf.reshape(norm5, shape=[-1, weights['wd1'].get_shape().as_list()[0]])
