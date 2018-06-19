@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\Fruit-Images-Dataset-master\\src\\models_alexnet_fit\\model.ckpt"
+all_model_checkpoint_paths: "D:\\Fruit-Images-Dataset-master\\src\\models_alexnet_fit\\model.ckpt"
